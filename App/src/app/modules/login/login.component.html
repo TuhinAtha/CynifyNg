@@ -1,0 +1,11 @@
+<h2>Login</h2>
+<form [formGroup] = "formGroup">
+	<div *ngFor="let field of screenModel.fields" class="form-group">
+    <label class="center-block" [attr.for]="field.id"></label>
+    <div [ngSwitch]="field.type">
+ 
+	    <input *ngSwitchCase="field.type==='text'||field.type==='password' ? field.type : ''" [formControlName]="field.name"
+	            [id]="field.id" [placeholder]="field.placeholder?field.placeholder : ''" [type]="field.type" [(ngModel)]="dataModel[field.name]">
+	</div> 
+	</div>
+</form>
