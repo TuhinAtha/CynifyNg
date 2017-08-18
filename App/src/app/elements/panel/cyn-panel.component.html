@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">{{config.title}}</div>
   <div class="panel-body">
-    Panel content
+    <cyn-form *ngFor="let group of config.groups" [config]="group" [data]="data"></cyn-form>
   </div>
 </div>

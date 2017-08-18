@@ -1,4 +1,4 @@
-import {Component,Input} from '@angular/core'
+import {Component,Input,Output, EventEmitter} from '@angular/core'
 
 @Component({
 	selector: 'cyn-screen-detail',
@@ -6,10 +6,15 @@ import {Component,Input} from '@angular/core'
 })
 export class CynScreenDetailComponent{
 	@Input()  config: any;
+	@Input() data: any;
+	@Output() action : any = new EventEmitter<string>();
 	constructor(){
-		debugger;
 	}
 	ngOnInit() {
-    	debugger;
+		
+  	}
+  	onActionClick(handler){
+  		debugger;
+  		this.action.emit(handler);
   	}
 }

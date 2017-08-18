@@ -10,8 +10,15 @@ import { DashboardService } from './dashboard.service';
 export class DashboardComponent {
   title = 'app';
   config: any;
+  data: any;
   constructor(service : DashboardService){
   	this.config = service.getScreenMetadata();
+  	this.data = service.getData();
   }
- 
+  handleAction(handler){
+    this[handler].call();
+  }
+  onSave(){
+    debugger;
+  }
 }

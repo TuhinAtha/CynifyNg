@@ -14,7 +14,8 @@ import { CynPanelComponent } from './elements/panel/cyn-panel.component';
 
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { LoginComponent } from './modules/login/login.component';
-
+import { CynFormComponent } from './elements/group/cyn-form/cyn-form.component';
+import { CynInputComponent } from './elements/field/cyn-input/cyn-input.component';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { LoginComponent } from './modules/login/login.component';
     CynScreenDetailComponent,
     CynPanelComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    CynFormComponent,
+    CynInputComponent
   ],
   imports: [
     BrowserModule,

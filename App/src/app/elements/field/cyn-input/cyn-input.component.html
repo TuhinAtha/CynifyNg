@@ -1,0 +1,4 @@
+<div class="form-group" [formGroup]="form">
+	<label for="exampleInputEmail1" [innerHTML]="config.label"></label>
+	<input type="text" class="form-control" id="exampleInputEmail1" [placeholder]="config.placeholder" [formControlName]="config.name" [value]="data[config.value]">
+</div>

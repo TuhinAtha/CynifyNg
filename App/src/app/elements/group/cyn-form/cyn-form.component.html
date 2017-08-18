@@ -1,0 +1,3 @@
+<form [formGroup]="form">
+  <cyn-input *ngFor="let field of config.fields" [config]="field" [form]="form" [data]="data"></cyn-input>
+ </form>
