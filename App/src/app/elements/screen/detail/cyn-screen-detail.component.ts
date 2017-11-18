@@ -7,14 +7,15 @@ import {Component,Input,Output, EventEmitter} from '@angular/core'
 export class CynScreenDetailComponent{
 	@Input()  config: any;
 	@Input() data: any;
-	@Output() action : any = new EventEmitter<string>();
+	@Output() actionClick : any = new EventEmitter<string>();
+
 	constructor(){
 	}
 	ngOnInit() {
 		
   	}
-  	onActionClick(handler){
-  		debugger;
-  		this.action.emit(handler);
-  	}
+  	onScreenActionClicked(handler){
+		this.actionClick.emit(handler);
+	}
+
 }

@@ -5,7 +5,7 @@ import {ControlUtil} from 'app/utils/controlutil.service'
 @Component({
   selector: 'cyn-form',
   templateUrl: './cyn-form.component.html',
-  styleUrls: ['./cyn-form.component.css'],
+  styleUrls: ['./cyn-form.component.scss'],
   providers : [ControlUtil]
 })
 export class CynFormComponent implements OnInit {

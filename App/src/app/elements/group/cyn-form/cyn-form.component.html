@@ -1,3 +1,9 @@
 <form [formGroup]="form">
-  <cyn-input *ngFor="let field of config.fields" [config]="field" [form]="form" [data]="data"></cyn-input>
- </form>
+	<ng-container *ngFor="let field of config.fields">
+		<ng-container  [ngSwitch]="field.type">
+			<cyn-input *ngSwitchCase="'input-text'" [config]="field" [form]="form" [(data)]="data"></cyn-input>
+			<cyn-input *ngSwitchCase="'input-number'" [config]="field" [form]="form" [(data)]="data"></cyn-input>
+			<cyn-input *ngSwitchCase="'input-date'" [config]="field" [form]="form" [(data)]="data"></cyn-input>
+		</ng-container>
+	</ng-container>
+</form>

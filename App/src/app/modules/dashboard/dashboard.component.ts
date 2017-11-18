@@ -19,6 +19,6 @@ export class DashboardComponent {
     this[handler].call();
   }
   onSave(){
-    debugger;
+     console.log(this.data);
   }
 }

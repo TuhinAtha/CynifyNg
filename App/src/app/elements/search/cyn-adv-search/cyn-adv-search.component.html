@@ -1,0 +1,35 @@
+<div role="tablist">
+  <div *ngFor="let filter of filters" class="card">
+    <div class="card-header" role="tab">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" href="#{{filter.name}}" aria-expanded="true" [attr.aria-controls]="filter.name">
+         {{filter.name}}
+        </a>
+      </h5>
+    </div>
+
+    <div id="{{filter.name}}" class="collapse show" role="tabpanel">
+      <div class="card-body p-0">
+        <ul *ngIf="filter.control=='multiselect'" class="list-group">
+          <li *ngFor="let option of data[filter.by]" class="list-group-item py-1 border-left-0 border-right-0">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input"  [attr.data-by]="filter.by" [attr.data-type]="filter.type" (change)="triggerFilter($event)" [(ngModel)]="option.checked" type="checkbox" value="{{option['value']}}">
+              {{option['value']}} <span class="badge badge-secondary">{{option['count']}}</span>
+            </label>
+          </div>
+          </li>
+        </ul>
+        <div *ngIf="filter.control=='number-range'" class="list-group">
+            <select class="form-control" *ngIf="data[filter.by] != undefined" [(ngModel)]="data[filter.by]['minSelected']" (change)="triggerFilter($event)">
+              <option *ngFor="let item of data[filter.by]['min']">{{item}}</option> 
+            </select>
+            <select class="form-control" *ngIf="data[filter.by] != undefined" [(ngModel)]="data[filter.by]['maxSelected']" (change)="triggerFilter($event)">
+              <option *ngFor="let item of data[filter.by]['max']">{{item}}</option> 
+            </select>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

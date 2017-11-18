@@ -1,6 +1,9 @@
-<div class="panel panel-default">
-  <div class="panel-heading">{{config.title}}</div>
-  <div class="panel-body">
-    <cyn-form *ngFor="let group of config.groups" [config]="group" [data]="data"></cyn-form>
+<div class="card">
+  <div class="card-header bg-primary">{{config.title}}</div>
+  <div class="card-body">
+  	<ng-container *ngFor="let group of config.groups" >
+  		<cyn-form *ngIf="group.type=='form'" [config]="group" [(data)]="data"></cyn-form>
+  		<cyn-table *ngIf="group.type=='table'" [config]="group" [(data)]="data"></cyn-table>
+  	</ng-container>
   </div>
 </div>

@@ -1,0 +1,30 @@
+$cyn-header-bg-color : #663399;
+$cyn-header-fg-color : #eee;
+.cyn-header{
+    background-color: $cyn-header-bg-color;
+    /*display: flex;*/
+    color: $cyn-header-fg-color;
+    width:100%;
+    padding-top:5px;
+    padding-bottom: 5px;
+
+    .cyn-header-action{
+        margin-left: 5px;
+        color: $cyn-header-bg-color;
+        background-color: $cyn-header-fg-color;
+        border-color: darken($cyn-header-fg-color,20%);
+    }
+
+    .cyn-header-back button{
+        width:50px;
+        background-color: $cyn-header-bg-color;
+        border-color: $cyn-header-bg-color;
+        color: $cyn-header-fg-color;
+
+    }
+
+    .cyn-header-title{
+        font-weight: bold;
+        font-size: 16pt;
+    }
+}

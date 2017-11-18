@@ -1,19 +1,2 @@
-<div class="cyn-header row">
-	<div class="col-md-8">
-		<div class="cyn-header-back pull-left">
-			<button type="button" class="btn" aria-label="Left Align">
-			  <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-			</button>
-		</div>
-		<div class="cyn-header-title">{{config.header.title}}</div>
-	</div>
-	<div class="col-md-4">
-		<div class="cyn-header-actions pull-right">
-			<button *ngFor="let action of config.header.actions" type="button" class="btn btn-default cyn-header-action" (click)="onActionClick(action.handler)">
-			  <span *ngIf="action.icon" class="cyn-header-action-icon glyphicon glyphicon-{{action.icon}}" aria-hidden="true"></span>
-			  <span *ngIf="action.iconOnly == false" class="cyn-header-action-icon-text">{{action.text}}</span>
-			</button>
-		</div>
-	</div>
-</div>
-<cyn-panel *ngFor="let panel of config.panels" [config]="panel" [data]="data"></cyn-panel>
+<cyn-header [config]="config.header" (actionClick)="onScreenActionClicked($event)"></cyn-header>
+<cyn-panel *ngFor="let panel of config.panels" [config]="panel" [(data)]="data"></cyn-panel>

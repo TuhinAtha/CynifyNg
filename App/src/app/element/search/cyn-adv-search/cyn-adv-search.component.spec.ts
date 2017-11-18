@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CynHeaderActionComponent } from './cyn-header-action.component';
+import { CynAdvSearchComponent } from './cyn-adv-search.component';
 
-describe('CynHeaderActionComponent', () => {
-  let component: CynHeaderActionComponent;
-  let fixture: ComponentFixture<CynHeaderActionComponent>;
+describe('CynAdvSearchComponent', () => {
+  let component: CynAdvSearchComponent;
+  let fixture: ComponentFixture<CynAdvSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CynHeaderActionComponent ]
+      declarations: [ CynAdvSearchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CynHeaderActionComponent);
+    fixture = TestBed.createComponent(CynAdvSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

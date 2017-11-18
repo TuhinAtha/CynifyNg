@@ -1,0 +1,20 @@
+.input-group-addon,
+.form-control{
+	border-radius: 0!important;
+}
+
+input.ng-invalid:not(.ng-pristine) {
+  border: 1px solid #721c24;
+}
+
+.form-group .alert{
+	padding : .25rem .5rem;
+	border-radius : 0px;
+}
+
+.cyndatepicker{
+	padding-left: 30px;
+	background-color:#fff;
+	color: #495057;
+	background-image: url("/media/icons/calendar16x16.png");
+}

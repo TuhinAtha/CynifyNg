@@ -1,0 +1,13 @@
+@mixin border-radius-important($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+.card{
+	@include border-radius-important(0!important);
+	.card-header:first-child{
+		@include border-radius-important(0!important);
+		color : #fff;
+	}
+}
